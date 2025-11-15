@@ -1,0 +1,20 @@
+-- Create the database
+CREATE DATABASE IF NOT EXISTS mangalore_bus_routes;
+USE mangalore_bus_routes;
+
+-- User table (data will be inserted automatically when user registers)
+CREATE TABLE user (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    uname VARCHAR(50),
+    upwd VARCHAR(50),
+    uemail VARCHAR(100)
+);
+
+-- Routes table (you will insert Mangalore bus route details here)
+CREATE TABLE routes (
+    route_number VARCHAR(20),
+    departure VARCHAR(50),
+    destination VARCHAR(50),
+    route_description TEXT,
+    estimated_travel_time INT
+);
